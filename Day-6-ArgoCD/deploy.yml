@@ -5,7 +5,7 @@ metadata:
   labels:
     app: syed-app
 spec:
-  replicas: 15
+  replicas: 5
   selector:
     matchLabels:
       app: syed-app

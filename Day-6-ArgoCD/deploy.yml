@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: swiggy-app
+  name: syed-app
   labels:
-    app: swiggy-app
+    app: syed-app
 spec:
   replicas: 15
   selector:
     matchLabels:
-      app: swiggy-app
+      app: syed-app
   template:
     metadata:
       labels:
-        app: swiggy-app
+        app: syed-app
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: swiggy-app
+      - name: syed-app
         #image: veeranarni/hotstar:latest
-        image: httpd
+        image: 681117450266.dkr.ecr.us-east-1.amazonaws.com/port:latest
         imagePullPolicy: "Always"
         

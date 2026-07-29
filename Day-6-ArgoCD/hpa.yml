@@ -7,12 +7,14 @@ spec:
     apiVersion: apps/v1
     kind: Deployment
     name: syed-app
+
   minReplicas: 1
   maxReplicas: 30
+
   metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 1
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 10

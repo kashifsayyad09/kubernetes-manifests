@@ -18,6 +18,6 @@ spec:
       containers:
       - name: syed-app
         #image: veeranarni/hotstar:latest
-        image: 681117450266.dkr.ecr.us-east-1.amazonaws.com/port:latest
+        image: 615037471716.dkr.ecr.us-east-1.amazonaws.com/home:latest
         imagePullPolicy: "Always"
         

@@ -4,20 +4,31 @@ metadata:
   name: syed-app
   labels:
     app: syed-app
+
 spec:
   replicas: 5
+
   selector:
     matchLabels:
       app: syed-app
+
   template:
     metadata:
       labels:
         app: syed-app
+
     spec:
       terminationGracePeriodSeconds: 30
+
       containers:
-      - name: syed-app
-        #image: veeranarni/hotstar:latest
-        image: 615037471716.dkr.ecr.us-east-1.amazonaws.com/home:latest
-        imagePullPolicy: "Always"
-        
+        - name: syed-app
+          image: 615037471716.dkr.ecr.us-east-1.amazonaws.com/home:latest
+          imagePullPolicy: Always
+
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "64Mi"
+            limits:
+              cpu: "500m"
+              memory: "128Mi"

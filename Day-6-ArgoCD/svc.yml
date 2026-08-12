@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: syed-app
+  name: swiggy-app
   labels:
-    app: syed-app
+    app: swiggy-app
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 80
   selector:
-    app: syed-app
+    app: swiggy-app
